@@ -1,6 +1,6 @@
-import { Task } from './task';
+// import { Task } from './task';
 
-export const tasks: Task[] = [
-'Task1',
-'Task2'
-]
+// export const tasks: Task[] = [
+// 'Task1',
+// 'Task2'
+// ]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { tasks } from './mock-tasks';
+//import { tasks } from './mock-tasks';
 import { Task } from './task'
 import { Location }                 from '@angular/common';
 
@@ -11,7 +11,7 @@ import { Location }                 from '@angular/common';
 	<input  [(ngModel)]="task" placeholder="Enter Todo" />
 	<button (click)="postTask()">Add</button>
 	<ul>
-	<li  *ngFor="let list of lists">
+	<li  *ngFor="let list of tasks">
 	<label class="route" >{{list}}&nbsp;<button (click)=deleteTask(list)>x</button> </label>
 	</li>
 	</ul>
@@ -25,17 +25,17 @@ import { Location }                 from '@angular/common';
 //  &nbsp;<button (click)=deleteTask(list)>x</button>
 
 export class AppComponent {
+	tasks: string[] = ['Task1','Task2','Task3','Task4'];
 	title = 'Angular4';
-	task:Task;
-	//task1:Task = ''
-	lists: Task[] = tasks;
+	task: string = ''
+	//lists: Task[] = tasks;
 	postTask(): void {
-		this.lists.push(this.task);
+		this.tasks.push(this.task);
 		this.task= ' '
 	}
-	deleteTask(list: Task): void {
-		const index = this.lists.indexOf(list);
-		this.lists.splice(index, 1);
+	deleteTask(list: string): void {
+		const index = this.tasks.indexOf(list);
+		this.tasks.splice(index, 1);
 	}
 }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { tasks } from './mock-tasks';
+//import { tasks } from './mock-tasks';
 
 @Component({
 	selector: 'task-detail',
