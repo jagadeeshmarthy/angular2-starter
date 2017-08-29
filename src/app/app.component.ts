@@ -26,13 +26,14 @@ import { Location }                 from '@angular/common';
 
 export class AppComponent {
 	title = 'Angular4';
-	task:string;
+	task:Task;
+	//task1:Task = ''
 	lists: Task[] = tasks;
 	postTask(): void {
 		this.lists.push(this.task);
-		this.task= ''
+		this.task= ' '
 	}
-	deleteTask(list): void {
+	deleteTask(list: Task): void {
 		const index = this.lists.indexOf(list);
 		this.lists.splice(index, 1);
 	}

@@ -10,11 +10,12 @@ var mock_tasks_1 = require("./mock-tasks");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular4';
+        //task1:Task = ''
         this.lists = mock_tasks_1.tasks;
     }
     AppComponent.prototype.postTask = function () {
         this.lists.push(this.task);
-        this.task = '';
+        this.task = ' ';
     };
     AppComponent.prototype.deleteTask = function (list) {
         var index = this.lists.indexOf(list);
